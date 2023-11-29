@@ -292,7 +292,6 @@ a {
   flex-wrap: wrap-reverse; 
 }
 
-
 .first-section .gallery > img {
   width: 12.5rem;
   height: 12.5rem;
@@ -410,7 +409,7 @@ a {
     }
 
     .third-section__list-items > li i {
-      left: -15%;
+      left: calc(-40% + 10vw);
     }
   }
 
