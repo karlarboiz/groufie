@@ -8,19 +8,30 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./styling/index.css">
+    <script src="./script/main.js" defer></script>
     <title>Groufie</title>
 </head>
 <body>
 
     <div id="backdrop" class="hidden"></div>
+
     <nav class="navbar">
-        <nav class="navbar">
-            <a href="#" class="nav-link">Home</a>
+        <a href="#" class="home">Home</a>
+        
+        <div id="menu" class="menu-visible navbar-toggle__position" >
+            <div class="menu-item"></div>
+            <div class="menu-item"></div>
+            <div class="menu-item"></div>
+        </div>
+        <button id="close-nav" class="hidden navbar-toggle__position"> &times; </button>
+
+        <div id="navbar-items" class="visible">
             <a href="#" class="nav-link">About</a>
             <a href="#" class="nav-link">Services</a>
             <a href="#" class="nav-link">Contact</a>
-        </nav>
+        </div>
     </nav>
+
 
     <main>
         <div class="main-content">
@@ -83,7 +94,7 @@
                 <h1>How It Works...</h1>
             </div>
 
-            <div>
+            <div class="third-section__list-container">
                 <ul class="third-section__list-items">
                     <li>    
                         <i class="material-icons">&#xe55d;</i>
@@ -159,6 +170,9 @@
                 <img src="./images/fourth-section/photography.webp" alt="Photography">
                 
             </div>
+
+          
+            
         </div>
     </section>
 
