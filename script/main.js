@@ -1,8 +1,10 @@
 "use strict";
 //nav section
+const navbar = document.querySelector(".navbar");
 const navItemsMenu = document.querySelector("#menu");
 const closeNavBtn = document.querySelector("#close-nav");
 const navbarItems = document.querySelector('#navbar-items');
+const main = document.querySelector("main");
 //
 
 const pageSections = document.querySelectorAll(".page-section");
@@ -64,24 +66,44 @@ window.addEventListener("resize",(e)=>{
     }
 })
 
+// this is the sticky or non sticky navbar
+const navStickyCallback = function(entries){
+    const [entry] = entries;
+
+    if(!entry.isIntersecting) {
+        navbar.classList.add("nav-sticky");
+    }else {
+        navbar.classList.remove("nav-sticky");
+    }
+} 
+
+const navIntersectionObserver = new IntersectionObserver(navStickyCallback,{
+    root: null,
+    threshold:0,
+})
+
+navIntersectionObserver.observe(main);
+
 //end of navbar functionality
 //will refactor the code as soon as possible
 
 //section load
 
 // pageSections.forEach(val=>val.classList.add("hidden"))
+pageSections.forEach(val=>val.classList.add("section-hidden"));
 
 let options = {
     root: null,
-    rootMargin: "0px",
-    threshold: .25,
+    rootMargin: "20px",
+    threshold: .5,
   };
 
-  let callback = (entries, observer) => {
-    const entry = entries[0];
+let callback = (entries, observer) => {
+const entry = entries[0];
 
-    console.log(entry.target);
-  };
+entry.target.classList.remove("section-hidden");
+
+};
   
   let observer = new IntersectionObserver(callback, options);
 
