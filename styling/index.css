@@ -329,7 +329,7 @@ a {
   }
 
   .carousel-container {
-    max-width: 50rem;
+    max-width:75%;
     overflow: hidden;
     --webkit-mask: 
     linear-gradient(
@@ -355,11 +355,10 @@ a {
     flex-wrap: nowrap;
     width: max-content;
     overscroll-behavior-inline: contain;
-    animation: movingCarousel 100s linear infinite;
-    
+    animation: movingCarousel 100s linear infinite;   
   }
 
-  .word-carousel li {
+  .word-carousel > li {
     max-width: max-content;
     height: fit-content;
     padding: .65rem .5rem;
@@ -573,6 +572,11 @@ a {
   position: relative;
 }
 
+.groups-grid__card:hover .groups-grid__card-article {
+  top: 100px;
+  opacity: 1;
+}
+
 .groups-grid__card::after{
   content: "";
   width: 100%;
@@ -586,19 +590,22 @@ a {
   z-index: -1;
 }
 
-.groups-grid__card article {
+.groups-grid__card-article {
   position: absolute;
-  top: calc(-30rem + 60vh + 30%);
-  left: 50%;
-  transform: translate(-50%,50%);
+  opacity: 0;
+  top: -50px;
+  left: 5%;
   width: 90%;
+  transition: 
+  top .4s ease-in-out,
+  opacity .45s ease-in-out;
 }
 
-.groups-grid__card article .special-header{
+.groups-grid__card-article .special-header{
   margin: .5rem 0;
 }
 
-.groups-grid__card article::after {
+.groups-grid__card-article::after {
   content: "";
   top: 0;
   width: .25rem;
