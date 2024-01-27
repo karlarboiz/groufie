@@ -91,25 +91,15 @@ a {
 
 .section-hidden{
   opacity: 0;
+  transform: translateY(2.5rem);
 }
 
-/* .page-section{
-  animation: sectionAnimation 2s linear;
+.section-visible__animation {
+  opacity: 1;
+  transform: translateY(0rem);
+  transition: opacity .25s ease-in,
+  transform .25s ease-in;
 }
-
-@keyframes sectionAnimation {
-  from {
-    opacity: 0;
-    transform: translateY(-5rem);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0rem);
-  }
-} */
-
-
 
 
 
@@ -134,6 +124,7 @@ a {
   font-size: var(--special-header);
   color: var(--primary-color);
   font-weight: 800;
+  padding-left: .75rem;
 }
 
 #close-nav {
@@ -333,7 +324,7 @@ a {
     overflow: hidden;
     --webkit-mask: 
     linear-gradient(
-      90deg,
+      45deg,
       transparent, 
       white 20%,
       white 80%
@@ -594,7 +585,7 @@ a {
   position: absolute;
   opacity: 0;
   top: -50px;
-  left: 5%;
+    left: 5%;
   width: 90%;
   transition: 
   top .4s ease-in-out,

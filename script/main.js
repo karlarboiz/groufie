@@ -29,7 +29,7 @@ closeNavBtn.addEventListener("click",
     navbarItems.classList.add("hidden");
 })
 
-window.addEventListener("load",()=>{
+window.addEventListener("DOMContentLoaded",()=>{
     if(navbarItems.classList.contains("visible")
     && window.innerWidth <=600) {
         navbarItems.classList.remove("visible");
@@ -102,7 +102,7 @@ let callback = (entries, observer) => {
 const entry = entries[0];
 
 entry.target.classList.remove("section-hidden");
-
+entry.target.classList.add("section-visible__animation");
 };
   
   let observer = new IntersectionObserver(callback, options);
