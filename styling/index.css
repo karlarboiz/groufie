@@ -615,6 +615,7 @@ a {
 .groups-grid__card-article::after {
   content: "";
   top: 0;
+  left: -.5rem;
   width: .25rem;
   height: 100%;
   position: absolute;
@@ -652,9 +653,13 @@ a {
   }
 }
 
-@media screen and (max-width : 760px) {
+@media screen and (max-width : 550px) {
 
-  
+   .groups-grid__card::after{
+
+    left: 1.5%;
+
+  }
   
 }
 
