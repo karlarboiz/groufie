@@ -650,7 +650,7 @@ a {
 
 /* this is a sign up section */
 .signup-section{
-    width: 60%;
+    max-width: 45rem;
     height: 80vh;
     position: fixed;
     top: calc(-50% + 20vh);

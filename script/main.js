@@ -95,7 +95,7 @@ pageSections.forEach(val=>val.classList.add("section-hidden"));
 let options = {
     root: null,
     rootMargin: "20px",
-    threshold: .5,
+    threshold: .2,
   };
 
 let callback = (entries, observer) => {
@@ -109,3 +109,14 @@ entry.target.classList.add("section-visible__animation");
 
   pageSections.forEach(val=>
     observer.observe(val));
+
+
+
+// //put loading attri for every image 
+// in every section of the page
+
+const lazyLoadingImages = document.querySelectorAll("img[data-slowload='image']");
+
+
+
+
